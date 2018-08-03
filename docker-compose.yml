@@ -1,0 +1,11 @@
+rmate:
+    image: postgres:9.6.3
+    container_name: rmate
+    environment:
+        [ POSTGRES_HOST=localhost
+         POSTGRES_PORT=5432
+         POSTGRES_PASSWORD=rmate
+         POSTGRES_USER=rmate
+         POSTGRES_DB=rmate]
+    ports:
+        - "5432:5432"
