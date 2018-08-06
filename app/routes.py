@@ -1,6 +1,6 @@
 from app import app
 from flask import Flask, render_template
-
+from app import model
 from models import * 
 from flask import jsonify, request, url_for, render_template, g,Flask, render_template, request, redirect, url_for, flash, make_response, session
 import json, copy, calendar, re, requests, sys
