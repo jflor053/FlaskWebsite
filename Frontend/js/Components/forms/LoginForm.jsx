@@ -39,9 +39,9 @@ class LoginForm extends Component {
         location : this.state.event_location,
       })
     }).then( async res => {
-        alert(res)
+        alert(res.message)
+        alert(res.secret_id)
     });
-    alert(repsonse.json())
   }
   updateInput(event){
     this.setState({ [event.target.name]: event.target.value });
