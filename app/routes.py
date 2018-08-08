@@ -13,7 +13,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/clubs/', methods = ['GET'])
-def getClubInfo(public_id):
+def getClubs():
 	info = Clubs.query.all()
 	club_schema = ClubsSchema()
 	output = club_schema.dump(info).data 
