@@ -40,7 +40,6 @@ class LoginForm extends Component {
       })
     })
       .then(function(response) {
-        return response.json()
       })
       .then(function(data) {
         alert(data.message)
