@@ -12,12 +12,13 @@ import uuid
 def index():
     return render_template('index.html')
 
+
 @app.route('/clubs/', methods = ['GET'])
 def getClubs():
 	info = Clubs.query.all()
-	club_schema = ClubsSchema()
-	output = club_schema.dump(info).data 
-	return jsonify({'clubs' :output})
+	club_schema = ClubsSchema(many=True)
+	result = club_schema.dump(info).data
+	return club_schema.jsonify(result)
 
 
 @app.route('/clubs/<public_id>', methods = ['GET'])

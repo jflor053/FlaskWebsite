@@ -14,7 +14,7 @@ class LoginForm extends Component {
       event_location:'',
     };
   }
-  async submitForm(){
+   submitForm(){
     /*alert(this.state.name)
     alert(this.state.description)
     alert(this.state.start_time)
@@ -23,7 +23,7 @@ class LoginForm extends Component {
     alert(this.state.date_event)
     alert(this.state.event_location)*/
 
-    const response = await fetch('https://agile-headland-18478.herokuapp.com/clubs/register', {
+    fetch('http://127.0.0.1:5000/clubs/register', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -38,10 +38,14 @@ class LoginForm extends Component {
         event_date: this.state.date_event,
         location : this.state.event_location,
       })
-    }).then( async res => {
-        alert(res.message)
-        alert(res.secret_id)
-    });
+    })
+      .then(function(response) {
+        return response.json()
+      })
+      .then(function(data) {
+        alert(data.message)
+        alert(data.secret_id)
+      })
   }
   updateInput(event){
     this.setState({ [event.target.name]: event.target.value });
