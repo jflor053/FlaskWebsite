@@ -39,12 +39,10 @@ class LoginForm extends Component {
         location : this.state.event_location,
       })
     })
-      .then(function(response) {
-        return response.json()
-      })
-      .then(function(data) {
-        //alert(data.message)
-        //alert(data.secret_id)
+      .then((response) => response.json())
+      .then((data) => {
+        alert(data.message)
+        alert(data.secret_id)
       })
   }
   updateInput(event){
