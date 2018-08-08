@@ -39,8 +39,10 @@ class LoginForm extends Component {
         location : this.state.event_location,
       })
     })
-      .then((response) => response.json())
-      .then((data) => {
+      .then(function(response) {
+        return response.json()
+      })
+      .then(function(data) {
         alert(data.message)
         alert(data.secret_id)
       })
