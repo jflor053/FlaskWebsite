@@ -14,7 +14,7 @@ class LoginForm extends Component {
       event_location:'',
     };
   }
-  submitForm(){
+  async submitForm(){
     /*alert(this.state.name)
     alert(this.state.description)
     alert(this.state.start_time)
