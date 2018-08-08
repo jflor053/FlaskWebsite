@@ -23,7 +23,7 @@ class LoginForm extends Component {
     alert(this.state.date_event)
     alert(this.state.event_location)*/
 
-    fetch('http://127.0.0.1:5000/clubs/register', {
+    fetch('https://agile-headland-18478.herokuapp.com/clubs/register', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
