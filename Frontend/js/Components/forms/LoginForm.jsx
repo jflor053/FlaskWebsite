@@ -38,7 +38,7 @@ class LoginForm extends Component {
         event_date: this.state.date_event,
         location : this.state.event_location,
       })
-    }).then(res => {
+    }).then( async res => {
         alert(res)
     });
     alert(repsonse.json())
